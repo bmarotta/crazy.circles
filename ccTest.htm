@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Loading</title>
+		<link rel="stylesheet" href="general.css" type="text/css">
+		<script charset="utf-8" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+		<script charset="utf-8" type="text/javascript" src="crazy.circles.min.js"></script>
+		<script>
+			var crazyCircles;
+			
+			var options;
+			
+            window.onload = function () {
+				
+				readOptions();
+				
+                crazyCircles = new CrazyCircles("loading", options );
+            };
+			
+			function readOptions() {
+				options = {
+					size: document.getElementById("size").value,
+					totalCircles: document.getElementById("totalCircles").value,
+					circleSize: document.getElementById("circleSize").value,
+					cycleDuration: document.getElementById("cycleDuration").value,
+					color: document.getElementById("colors").checked ? "multi" : "#808080",
+					shadow: document.getElementById("shadow").checked,
+					fadeIn: document.getElementById("fadeIn").checked,
+					goCrazyCycle: document.getElementById("goCrazyCycle").value,
+					restartAfterCycle: document.getElementById("restartAfterCycle").value,
+					image: document.getElementById("useImage").checked ? "favicon.gif" : "",
+					imageWidth: document.getElementById("useImage").checked ? 16 : 0,
+					imageHeight: document.getElementById("useImage").checked ? 16 : 0
+				};
+				
+				document.getElementById("cycleDurationVal").innerHTML = document.getElementById("cycleDuration").value;
+				
+			}
+			
+			function reset() {
+				readOptions();
+				crazyCircles.resetOptions(options);
+			}
+		</script>
+	</head>
+	<body>
+	<h1>Crazy loading</h1>
+	<div id="loading"></div>
+	<span>"Loading..." test</span>
+	<br/><br/>
+	Size: <input type="number" id="size" value="60" onChange="reset()"></input><br/>
+	Circle Size: <input type="number" id="circleSize" value="0" onChange="reset()"></input><br/>
+	Circles: <input type="number" id="totalCircles" value="8" onChange="reset()"></input><br/>
+	Color: <input type="checkbox" id="colors" checked="true" onClick="reset()"></input><br/>
+	Shadow: <input type="checkbox" id="shadow" checked="true" onClick="reset()"></input><br/>
+	Fade in: <input type="checkbox" id="fadeIn" onClick="reset()"></input><br/>
+	Use image: <input type="checkbox" id="useImage" onClick="reset()"></input><br/>
+	Cycle Duration: <input type="range" id="cycleDuration" value="2000" onChange="reset()" min="500" max="5000" step="100"></input> <span id="cycleDurationVal"></span> <br/>
+	Go crazy cycle: <input type="number" id="goCrazyCycle" value="0" onChange="reset()"></input><br/>
+	Restart after cycle: <input type="number" id="restartAfterCycle" value="0" onChange="reset()"></input><br/>
+	</body>
+</html>

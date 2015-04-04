@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Loading</title>
+		<link rel="stylesheet" href="general.css" type="text/css">
+	</head>
+	<body>
+	<div id="ccGrey" style="width: 120px; height: 80px; float: left; margin: 4px; text-align: center;"><br/><span>default</span></div>
+<div id="ccColor" style="width: 120px; height: 80px; float: left; margin: 4px; text-align: center;"><br/><span>Colors</span></div>
+<div id="ccFadeIn" style="width: 120px; height: 80px; float: left; margin: 4px; text-align: center;"><br/><span>Fade In</span></div>
+<div id="ccGoCrazy" style="width: 120px; height: 80px; float: left; margin: 4px; text-align: center;"><br/><span>Go Crazy</span></div>
+<div id="ccImages" style="width: 120px; height: 80px; float: left; margin: 4px; text-align: center;"><br/><span>Images</span></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js" type="text/javascript"></script>
+<script src="./crazy.circles.min.js" type="text/javascript"></script>
+<script type="text/javascript">// <![CDATA[
+new CrazyCircles("ccGrey", {} ); 
+new CrazyCircles("ccColor", { color: "multi" } ); 
+new CrazyCircles("ccFadeIn", { color: "multi", fadeIn: true, restartAfterCycle: 13 } ); 
+new CrazyCircles("ccGoCrazy", { color: "multi", goCrazyCycle: 5, restartAfterCycle: 10 } );
+new CrazyCircles("ccImages", { image: "favicon.gif", imageWidth: 16, imageHeight: 16, totalCircles: 5 } );
+// ]]></script>
+	</body>
+</html>
