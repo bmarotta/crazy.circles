@@ -8,7 +8,7 @@ The CrazyCircles javascript class allows you to easily add this nice visual effe
  
 * [Usage](#usage)
 * [Options](#options)
-* [Implementation](#blog-article)
+* [Implementation and Examples](#implementation-and-examples)
 * [Dependencies](#dependencies)
  
 ## Usage
