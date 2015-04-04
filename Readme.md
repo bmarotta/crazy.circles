@@ -15,17 +15,17 @@ The CrazyCircles javascript class allows you to easily add this nice visual effe
  
 To render the crazy circles, you need a container (i.e.: div). On the class intantiation, you pass the id of your container and optionally your options configuration.
 
-	> HTML:
+> HTML:
 
-	```html
-	<div id="cc"></div>
-	```
+```html
+<div id="cc"></div>
+```
 
-	> Script:
+> Script:
 
-	```javascript
-	new CrazyCircles("cc", {} );
-	```
+```javascript
+new CrazyCircles("cc", {} );
+```
  
 ## Options
 
@@ -86,15 +86,14 @@ The number of circles for the illusion. Minimum 1 (which is pretty stupid)
 
 **Example**
 
-	```javascript
-	new CrazyCircles(
-	  "ccGoCrazy", 
-	  { color: "multi", 
-	    goCrazyCycle: 5, 
-		restartAfterCycle: 10 
-	  } );	
-	```javascript
-	
+```javascript
+new CrazyCircles(
+  "ccGoCrazy", 
+  { color: "multi", 
+    goCrazyCycle: 5, 
+    restartAfterCycle: 10 
+  } );	
+```
 	
 
 ## Implementation and Examples
