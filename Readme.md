@@ -41,9 +41,11 @@ Following options are allowed:
  * **cycleDuration** - Cycle in milliseconds for a complete spin (ohhh, isn't the spinning just an illusion?)
  * **fadeIn** - When true, the circles will appear progressively
  * **goCrazyCycle** - Number of cycles for the balls to go completely crazy. 0 = never
+ * **goCrazyOnClick** - When clicking on a circle, it goes crazy
  * **image** - Replaces the balls by an image from the url
  * **imageHeight** - Image height (when using an image)
  * **imageWidth** - Image width (when using an image)
+ * **path** - Replaces the balls by an svg path
  * **restartAfterCycle** - Restarts after x cycles. Only relevant when using fadeIn or goCrazyCycle
  * **size** - The container size. If null or 0 uses the current container size.
  * **shadow** - Adds a shadow for each circle to give a movement effect. Doesn't work for images
