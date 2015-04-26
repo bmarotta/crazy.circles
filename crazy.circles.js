@@ -196,7 +196,7 @@ CrazyCircles.prototype.cleanOptions = function() {
         this.offSetY = -(this.options.imageHeight / 2);
         this.options.circleSize = Math.max(this.options.imageWidth, this.options.imageHeight) / 2 + 1;
     }
-    else if (this.options.path != "") {
+    else if (this.options.path != "" && this.options.path != undefined) {
         this.isPath = true;
         var box = Raphael.pathBBox(this.options.path);
         this.offSetX = -(box.width / 2) - box.x;
