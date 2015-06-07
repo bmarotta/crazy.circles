@@ -196,7 +196,7 @@ CrazyCircles.prototype.cleanOptions = function() {
         this.offSetY = -(this.options.imageHeight / 2);
         this.options.circleSize = Math.max(this.options.imageWidth, this.options.imageHeight) / 2 + 1;
     }
-    else if (this.options.path != "" && this.options.path != undefined) {
+    else if (this.options.path != "") {
         this.isPath = true;
         var box = Raphael.pathBBox(this.options.path);
         this.offSetX = -(box.width / 2) - box.x;
@@ -204,7 +204,6 @@ CrazyCircles.prototype.cleanOptions = function() {
         this.options.circleSize = Math.max(box.width, box.height) / 2 + 1;
     }
 
-	
     if (this.options.circleSize == null || this.options.circleSize == 0 || this.options.circleSize == "auto") {
         this.options.circleSize = this.options.size / 20;
     }
@@ -297,6 +296,9 @@ CrazyCircles.prototype.animateCircle = function(circleInfo, progressMs, deltaMs)
 }
 
 CrazyCircles.prototype.setXY = function(circle, x, y) {
+
+    var oldX = circle.realX == null ? 0 : circle.realX;
+    var oldY = circle.realY == null ? 0 : circle.realY;
 
     circle.realX = x;
     circle.realY = y;
